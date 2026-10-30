@@ -1,0 +1,97 @@
+
+
+ >> R  2    R e s i s t i v i t y   I n v e r s i o n   v4.10 <<
+
+ >> D a t e : 30 - 10 - 2026
+ >> L1_2026-10-22_COMBINADO_DD_WS                                                   
+ >> I n v e r s e   S o l u t i o n   S e l e c t e d <<
+ >> Reading start resistivity from res0.dat                      
+ >> R e g u l a r i s e d   T y p e <<
+ >>   L i n e a r    F i l t e r    <<
+ >> L o g - D a t a   I n v e r s i o n <<
+ >> N o r m a l   R e g u l a r i s a t i o n <<
+ >> D a t a   w e i g h t s   w i l l   b e  m o d i f i e d <<
+ >> D a t a   w e i g h t   t o   b e   r e a d   f r o m   d a t a   f i l e <<
+
+
+ Processing dataset   1
+
+
+ Measurements read:  1452     Measurements rejected:     0
+   Geometric mean of apparent resistivities:  0.68730E+04
+
+ >> Total Memory required is:          0.404 Gb
+
+   Iteration   1
+     Initial RMS Misfit:     11715.26       Number of data ignored:     0
+     Alpha:    39617742.849   RMS Misfit:      307.50  Roughness:        5.607
+     Alpha:    18388927.282   RMS Misfit:      240.88  Roughness:        7.465
+     Alpha:     8535383.953   RMS Misfit:      193.93  Roughness:        9.754
+     Alpha:     3961774.285   RMS Misfit:      162.48  Roughness:       12.906
+     Alpha:     1838892.728   RMS Misfit:      149.32  Roughness:       17.693
+     Alpha:      853538.395   RMS Misfit:      159.44  Roughness:       29.559
+     Step length set to   1.00000
+     Final RMS Misfit:      149.32
+     Updated data weights
+
+   Iteration   2
+     Initial RMS Misfit:        65.69       Number of data ignored:     0
+     Alpha:     1165383.639   RMS Misfit:       76.08  Roughness:       11.620
+     Alpha:      540923.169   RMS Misfit:       59.06  Roughness:       15.564
+     Alpha:      251074.294   RMS Misfit:       47.36  Roughness:       20.422
+     Alpha:      116538.364   RMS Misfit:       40.02  Roughness:       26.557
+     Alpha:       54092.317   RMS Misfit:       38.13  Roughness:       35.228
+     Alpha:       25107.429   RMS Misfit:       41.91  Roughness:       47.969
+     Step length set to   1.00000
+     Final RMS Misfit:       38.13
+     Updated data weights
+
+   Iteration   3
+     Initial RMS Misfit:        19.35       Number of data ignored:     0
+     Alpha:       31987.863   RMS Misfit:       20.86  Roughness:       26.381
+     Alpha:       14847.451   RMS Misfit:       17.88  Roughness:       32.958
+     Alpha:        6891.576   RMS Misfit:       15.67  Roughness:       43.249
+     Alpha:        3198.786   RMS Misfit:       14.69  Roughness:       59.679
+     Alpha:        1484.745   RMS Misfit:       17.26  Roughness:       84.097
+     Step length set to   1.00000
+     Final RMS Misfit:       14.69
+     Updated data weights
+
+   Iteration   4
+     Initial RMS Misfit:         8.67       Number of data ignored:     0
+     Alpha:        1807.517   RMS Misfit:        8.95  Roughness:       48.261
+     Alpha:         838.975   RMS Misfit:        7.87  Roughness:       62.860
+     Alpha:         389.418   RMS Misfit:        8.55  Roughness:       83.970
+     Step length set to   1.00000
+     Final RMS Misfit:        7.87
+     Updated data weights
+
+   Iteration   5
+     Initial RMS Misfit:         4.87       Number of data ignored:     0
+     Alpha:         458.854   RMS Misfit:        4.78  Roughness:       59.318
+     Alpha:         212.981   RMS Misfit:        4.46  Roughness:       73.963
+     Alpha:          98.857   RMS Misfit:        5.55  Roughness:       95.128
+     Step length set to   1.00000
+     Final RMS Misfit:        4.46
+     Updated data weights
+
+   Iteration   6
+     Initial RMS Misfit:         2.94       Number of data ignored:     0
+     Alpha:         113.205   RMS Misfit:        2.87  Roughness:       73.536
+     Alpha:          52.545   RMS Misfit:        2.81  Roughness:       91.345
+     Alpha:          24.389   RMS Misfit:        4.93  Roughness:      118.581
+     Step length set to   1.00000
+     Final RMS Misfit:        2.81
+     Updated data weights
+
+   Iteration   7
+     Initial RMS Misfit:         1.96       Number of data ignored:     0
+     Alpha:          27.297   RMS Misfit:        1.86  Roughness:       95.683
+     Alpha:          12.670   RMS Misfit:        2.04  Roughness:      122.735
+     Step length set to   1.00000
+     Final RMS Misfit:        1.86
+     Updated data weights
+
+   Iteration   8
+     Initial RMS Misfit:         1.37       Number of data ignored:     0
+     Alpha:          13.891   RMS Misfit:        1.31  Roughness:      102.365

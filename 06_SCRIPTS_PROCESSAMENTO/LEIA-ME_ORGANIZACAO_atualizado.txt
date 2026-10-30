@@ -1,0 +1,42 @@
+ORGANIZAÇÃO DA PASTA DOLINA
+Atualizado em: 2026-10-30
+
+ONDE ENCONTRAR CADA COISA
+
+00_COMECE_AQUI
+  Documentação geral e manifesto completo das movimentações.
+
+01_PROJETO_DOLINA_MARACANAS
+  Projeto integrado: modelo 3D, geologia/SIG, estratigrafia/interpretação e referências originais.
+
+02_DADOS_GEOFISICOS
+  Dados brutos, filtrados, seções e referências das campanhas 20262210 e 20262410.
+
+03_FOTOS_DE_CAMPO
+  Fotos organizadas em subpastas por data (AAAA-MM-DD).
+
+04_RECURSOS_FIGURAS_R
+  Scripts R, estilos e instruções para geração de figuras.
+
+90_VARIANTES_PARA_REVISAO
+  Contém 31 arquivos que exigem revisão: 13 documentos Word, 3 planilhas Excel, 11 arquivos BIN e 4 scripts R. Alguns diferem de arquivos com nomes semelhantes; por isso não foram apagados automaticamente.
+
+DUPLICADOS REMOVIDOS
+
+A pasta 99_DUPLICADOS_CONFIRMADOS, com 141 arquivos e 143,50 MB, foi enviada à Lixeira em 2026-10-30 a pedido do usuário. As cópias ativas correspondentes permanecem nas pastas organizadas.
+
+REGRAS IMPORTANTES
+
+- Conjuntos GIS foram mantidos completos: SHP, DBF, SHX, PRJ, CPG e arquivos auxiliares continuam juntos.
+- O manifesto registra os caminhos antigos e novos usados durante a organização.
+- Os duplicados removidos podem ser recuperados pela Lixeira enquanto ela não for esvaziada.
+
+RESUMO ATUAL
+
+- 00_COMECE_AQUI: 3 arquivos, 0,23 MB
+- 01_PROJETO_DOLINA_MARACANAS: 78 arquivos, 129,02 MB
+- 02_DADOS_GEOFISICOS: 20 arquivos, 4,75 MB
+- 03_FOTOS_DE_CAMPO: 80 arquivos, 38,96 MB
+- 04_RECURSOS_FIGURAS_R: 8 arquivos, 0,67 MB
+- 90_VARIANTES_PARA_REVISAO: 31 arquivos, 7,08 MB
+- Total atual: 220 arquivos, 180,71 MB
