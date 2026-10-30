@@ -1,0 +1,44 @@
+{
+  "model_name": "Dolina dos Maracanas - modelo parametrico v1",
+  "crs_epsg": 31983,
+  "major_diameter_m": 295.0,
+  "minor_diameter_m": 130.0,
+  "depth_m": 105.0,
+  "n_azimuth": 240,
+  "n_depth": 81,
+  "wall_depth_fraction": [
+    0.0,
+    0.1,
+    0.25,
+    0.45,
+    0.65,
+    0.82,
+    1.0
+  ],
+  "wall_radius_factor": [
+    1.0,
+    1.04,
+    1.06,
+    0.98,
+    0.75,
+    0.48,
+    0.22
+  ],
+  "angular_roughness_fraction": 0.025,
+  "section_depth_m": 120.0,
+  "section_depth_samples": 61,
+  "coordinate_system": "SIRGAS 2000 / UTM zone 23S",
+  "center_easting_m": 273003.0600928047,
+  "center_northing_m": 8298165.254412512,
+  "center_reference_elevation_m": 895.9936141140341,
+  "major_axis_azimuth_deg_from_north": 38.163217457749965,
+  "survey_line_midpoint_separation_m": 126.69483323068295,
+  "L1_geodesic_projected_length_m": 630.388950626184,
+  "L2_geodesic_projected_length_m": 655.6637349945793,
+  "topography_plane": {
+    "z0_m": 895.9936141140341,
+    "dz_dx": -0.02622341936326915,
+    "dz_dy": 0.034683778860297124
+  },
+  "interpretation": "Synthetic collapse-doline wall and floor constrained by two survey lines; not a surveyed cave geometry."
+}

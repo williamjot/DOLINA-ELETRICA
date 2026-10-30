@@ -1,0 +1,14 @@
+{
+  "model_name": "Dolina dos Maracanas - modelo parametrico v1",
+  "crs_epsg": 31983,
+  "major_diameter_m": 295.0,
+  "minor_diameter_m": 130.0,
+  "depth_m": 105.0,
+  "n_azimuth": 240,
+  "n_depth": 81,
+  "wall_depth_fraction": [0.0, 0.10, 0.25, 0.45, 0.65, 0.82, 1.0],
+  "wall_radius_factor": [1.0, 1.04, 1.06, 0.98, 0.75, 0.48, 0.22],
+  "angular_roughness_fraction": 0.025,
+  "section_depth_m": 120.0,
+  "section_depth_samples": 61
+}

@@ -1,0 +1,53 @@
+{
+  "profile": "L1_2026-10-22_COMBINADO_DD_WS",
+  "source_files": [
+    "C:\\Users\\RT09B\\Desktop\\WILLIAM\\WILLIAM\\DOLINA-20261030T170722Z-1-001\\DOLINA DOS MARACANAS\\02_DADOS_GEOFISICOS\\20262210\\FILTRADOS\\20262210_DD_FILTRADO.bin",
+    "C:\\Users\\RT09B\\Desktop\\WILLIAM\\WILLIAM\\DOLINA-20261030T170722Z-1-001\\DOLINA DOS MARACANAS\\02_DADOS_GEOFISICOS\\20262210\\FILTRADOS\\20262210_WS_FILTRADO.bin"
+  ],
+  "source_counts_after_import": {
+    "DD": 667,
+    "WS": 811
+  },
+  "topography_source": "C:\\Users\\RT09B\\Desktop\\WILLIAM\\WILLIAM\\DOLINA-20261030T170722Z-1-001\\DOLINA DOS MARACANAS\\02_DADOS_GEOFISICOS\\20262210\\Linha01_Dolina_10m.xlsx",
+  "topography_electrodes": 66,
+  "topography_x_min_m": 0.0,
+  "topography_x_max_m": 650.0,
+  "topography_z_min_m": 889.52,
+  "topography_z_max_m": 905.15,
+  "remote_electrode_added": false,
+  "measurements_before_qc": 1478,
+  "measurements_removed_invalid": 0,
+  "measurements_inverted": 1478,
+  "reciprocity_filter_applied": false,
+  "reciprocity_filter_reason": "Nenhuma medição recíproca disponível.",
+  "unpaired_filter_applied": false,
+  "unpaired_filter_reason": "Sem pares recíprocos; removeria dados válidos.",
+  "stacking_filter_applied": false,
+  "stacking_filter_reason": "Coluna dev ausente; magErr foi usada como peso de erro.",
+  "negative_transfer_resistance_filter_applied": false,
+  "negative_transfer_resistance_filter_reason": "Sinal negativo é geométrico em DD/PD; resistividade aparente é positiva.",
+  "measured_error_weighting": true,
+  "resipy_version": "3.6.6",
+  "project_summary": {
+    "Data": true,
+    "Number of Surveys": 1,
+    "Number of electrodes": 66,
+    "Borehole electrodes": false,
+    "Remote electrodes": false,
+    "Error model": false,
+    "Mesh Type": "Triangular",
+    "Number of Elements": 33412,
+    "Number of Nodes": 16997,
+    "Estimated RAM for forward solution (Gb)": 0.011949293,
+    "Estimated RAM for inverse solution (Gb)": 0.411373763,
+    "Convergence of inverse solution": true,
+    "RMS of inverse solution": 1.1,
+    "RMS error as percentage estimate": 621.1628885206405,
+    "Number of iterations": 9,
+    "Median normalised error": 0.34806000000000004,
+    "Working Directory": "C:\\Users\\RT09B\\Documents\\Codex\\2026-10-30\\c-users-rt09b-desktop-william-william\\outputs\\ResIPy_Dolina_Maracanas\\L1_2026-10-22_COMBINADO_DD_WS\\projeto_resipy\\invdir"
+  },
+  "mesh_elements": 33412,
+  "mesh_nodes": 16997,
+  "finished_at": "2026-10-30T15:37:11"
+}
