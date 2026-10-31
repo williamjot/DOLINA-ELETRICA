@@ -1,0 +1,42 @@
+{
+  "status": "complete",
+  "date": "2026-10-31",
+  "cut_corners": true,
+  "mesh": {
+    "type": "quad",
+    "fmd_m": 120.0,
+    "elemx": 4,
+    "xgf": 1.5,
+    "zf": 1.1,
+    "zgf": 1.5,
+    "pad": 8,
+    "elements": 14520,
+    "nodes": 14895
+  },
+  "contact_max_ohm": 40000.0,
+  "synthetic": {
+    "background_ohm_m": 5000.0,
+    "cavity_ohm_m": 50000.0,
+    "noise_percent": 3.0,
+    "seed": 20261030,
+    "threshold_ohm_m": 15811.388300841896
+  },
+  "remote_electrode": {
+    "label": "67",
+    "x": 99999.0,
+    "remote": true,
+    "l2_pd_measurements_after_qc": 1304
+  },
+  "canonical_outputs": {
+    "individual_l1_dd": "05_RESULTADOS_RESIPY/INVERSOES_INDIVIDUAIS_QUAD_CAVIDADE_2026-10-30/L1_DD",
+    "individual_remaining": "05_RESULTADOS_RESIPY/INVERSOES_INDIVIDUAIS_QUAD_CAVIDADE_CONTINUACAO_2026-10-30",
+    "combined_l1": "05_RESULTADOS_RESIPY/INVERSOES_COMBINADAS_QUAD_CAVIDADE_2026-10-31/L1_DD_WS_COMBINADO",
+    "combined_l2_real": "05_RESULTADOS_RESIPY/INVERSOES_COMBINADAS_QUAD_CAVIDADE_2026-10-31_L2_CONTINUACAO/L2_DD_WS_PD_COMBINADO/REAL",
+    "combined_l2_synthetic": "05_RESULTADOS_RESIPY/INVERSOES_COMBINADAS_QUAD_CAVIDADE_2026-10-31_L2_SINTETICO_FINAL"
+  },
+  "image_commits": 42,
+  "numeric_commits": {
+    "individual": "734d574",
+    "combined": "d23f214"
+  }
+}

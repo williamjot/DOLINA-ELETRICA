@@ -65,6 +65,11 @@ ResIPy 3.6.6 encontrou o bug interno de profundidade de malha com o eletrodo
 remoto. Ele reutiliza os CSV/PNG reais já exportados, mantém o eletrodo 67 no
 infinito e calcula somente pseudoseção, reinversão e comparação sintéticas.
 
+O índice final das pastas válidas, parâmetros, justificativas, métricas e
+interpretação está em
+`05_RESULTADOS_RESIPY/RELATORIO_CONSOLIDADO_INVERSOES_ERT.md`, acompanhado de
+`05_RESULTADOS_RESIPY/manifesto_resultados_ert.json` para leitura automática.
+
 ## Notebooks prontos para execução manual
 
 Os notebooks em `notebooks/` são entregues sem células executadas e nunca
