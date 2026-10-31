@@ -25,3 +25,38 @@ Arquivos principais:
 - `organizar_dolina.ps1`: organização inicial do acervo.
 
 O ResIPy 3.6.6 foi a versão usada nos resultados publicados.
+
+## Inversões individuais quadrilaterais e ensaio sintético
+
+`resipy_individual_quad_synthetic.py` executa separadamente `L1-DD`, `L1-WS`,
+`L2-DD`, `L2-WS` e `L2-PD`, com corte auditável de contato em 40 kΩ, malha
+quadrilateral e `Cut Corners` (`clipCorners=True`) nas seções exportadas.
+
+O mesmo script constrói no ResIPy um modelo direto de cavidade resistiva a
+partir de `dolina_model.npz`, usa exatamente os quadrupolos reais de cada
+arranjo, adiciona ruído gaussiano reprodutível e reinverte os dados sintéticos
+a partir de um fundo homogêneo. Parâmetros, métricas e justificativas são
+gravados em JSON e Markdown na pasta de saída.
+
+Exemplo:
+
+```powershell
+python .\resipy_individual_quad_synthetic.py `
+  'D:\WILLIAM\DOLINA-ELETRICA' `
+  'D:\WILLIAM\DOLINA-ELETRICA\05_RESULTADOS_RESIPY\INVERSOES_INDIVIDUAIS_QUAD_CAVIDADE'
+```
+
+O ResIPy 3.6.6 requer `pandas<3`; essa restrição está fixada em
+`requirements_resipy.txt`.
+
+## Notebooks prontos para execução manual
+
+Os notebooks em `notebooks/` são entregues sem células executadas e nunca
+retomam automaticamente pastas parciais:
+
+- `01_secoes_brutas_iniciais_ERT.ipynb`: cinco seções brutas individuais e
+  duas combinadas, diretamente dos arquivos `BRUTOS`.
+- `02_inversoes_individuais_quad_sintetico.ipynb`: seleção explícita dos casos,
+  inversões quadrilaterais e ensaio sintético no ResIPy.
+
+Ambos recusam sobrescrever uma pasta de saída existente.

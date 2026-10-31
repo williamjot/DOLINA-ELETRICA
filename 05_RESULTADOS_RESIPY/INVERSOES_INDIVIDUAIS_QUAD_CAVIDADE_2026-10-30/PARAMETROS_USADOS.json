@@ -1,0 +1,45 @@
+{
+  "resipy_version": "3.6.6",
+  "pandas_version": "2.3.3",
+  "numpy_version": "1.26.4",
+  "mesh_parameters": {
+    "typ": "quad",
+    "fmd": 120.0,
+    "elemx": 4,
+    "xgf": 1.5,
+    "zf": 1.1,
+    "zgf": 1.5,
+    "pad": 8
+  },
+  "inversion_parameters": {
+    "data_type": 1,
+    "inverse_type": 1,
+    "reg_mode": 0,
+    "alpha_aniso": 1.0,
+    "alpha_s": 10.0,
+    "max_iter": 10,
+    "tolerance": 1.0,
+    "error_mod": 2,
+    "min_error": 0.01,
+    "a_wgt": 0.0,
+    "b_wgt": 0.0,
+    "rho_min": 1.0,
+    "rho_max": 1000000.0
+  },
+  "synthetic_parameters": {
+    "background_resistivity_ohm_m": 5000.0,
+    "cavity_resistivity_ohm_m": 50000.0,
+    "gaussian_noise_percent": 3.0,
+    "random_seed": 20261030,
+    "comparison_threshold_ohm_m": 15811.388300841896
+  },
+  "contact_max_ohm": 40000.0,
+  "cases": [
+    "L1_DD",
+    "L1_WS",
+    "L2_DD",
+    "L2_WS",
+    "L2_PD"
+  ],
+  "started_at": "2026-10-30T21:59:24"
+}

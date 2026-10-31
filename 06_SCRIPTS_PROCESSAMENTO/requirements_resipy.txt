@@ -1,5 +1,5 @@
 resipy==3.6.6
-numpy
-pandas
+numpy<2
+pandas<3
 matplotlib
 openpyxl

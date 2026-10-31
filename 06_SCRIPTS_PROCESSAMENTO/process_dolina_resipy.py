@@ -117,8 +117,16 @@ def save_mesh(project: Project, output: Path, title: str) -> None:
 
 def save_result(project: Project, output: Path, title: str) -> None:
     fig, ax = plt.subplots(figsize=(13, 5.5))
-    project.showResults(ax=ax, sens=False, color_map="turbo", edge_color="none")
-    ax.set_title(title)
+    project.showResults(
+        ax=ax,
+        sens=False,
+        color_map="turbo",
+        edge_color="none",
+        clipCorners=True,
+        cropMaxDepth=True,
+        clipContour=True,
+    )
+    ax.set_title(f"{title} — Cut Corners")
     fig.tight_layout()
     fig.savefig(output, dpi=220)
     plt.close(fig)
