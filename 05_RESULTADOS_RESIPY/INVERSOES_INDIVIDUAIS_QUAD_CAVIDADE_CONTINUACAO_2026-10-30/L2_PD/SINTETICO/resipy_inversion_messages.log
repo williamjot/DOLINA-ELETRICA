@@ -1,0 +1,117 @@
+Writing .in file and protocol.dat... 
+done
+
+
+--------------------- MAIN INVERSION ------------------
+
+
+
+
+
+ >> R  2    R e s i s t i v i t y   I n v e r s i o n   v4.10 <<
+
+
+
+ >> D a t e : 30 - 10 - 2026
+
+ >> L2_PD_SINTETICO_QUAD                                                            
+
+ >> I n v e r s e   S o l u t i o n   S e l e c t e d <<
+
+ >> Determining storage needed for finite element conductance matrix
+
+ >> Generating index array for finite element conductance matrix
+
+ >> Reading start resistivity from res0.dat                      
+
+ >> R e g u l a r i s e d   T y p e <<
+
+ >>   L i n e a r    F i l t e r    <<
+
+ >> L o g - D a t a   I n v e r s i o n <<
+
+ >> N o r m a l   R e g u l a r i s a t i o n <<
+
+ >> D a t a   w e i g h t s   w i l l   b e  m o d i f i e d <<
+
+ >> D a t a   w e i g h t   t o   b e   r e a d   f r o m   d a t a   f i l e <<
+
+
+
+
+
+ Processing dataset   1
+
+
+
+
+
+ Measurements read:  1304     Measurements rejected:     0
+
+   Geometric mean of apparent resistivities:  0.11374E+05
+
+
+
+ >> Total Memory required is:          0.164 Gb
+
+
+
+   Iteration   1
+
+     Initial RMS Misfit:        17.12       Number of data ignored:     0
+
+     Alpha:         692.763   RMS Misfit:        5.73  Roughness:       24.225
+
+     Alpha:         321.552   RMS Misfit:        6.33  Roughness:       35.892
+
+     Step length set to   1.00000
+
+     Final RMS Misfit:        5.73
+
+     Updated data weights
+
+
+
+   Iteration   2
+
+     Initial RMS Misfit:         4.34       Number of data ignored:     0
+
+     Alpha:         455.753   RMS Misfit:        2.03  Roughness:       18.890
+
+     Alpha:         211.542   RMS Misfit:        1.70  Roughness:       24.326
+
+     Alpha:          98.189   RMS Misfit:        1.41  Roughness:       32.726
+
+     Alpha:          45.575   RMS Misfit:        1.23  Roughness:       43.706
+
+     Alpha:          21.154   RMS Misfit:        1.19  Roughness:       55.819
+
+     Alpha:           9.819   RMS Misfit:        1.25  Roughness:       68.631
+
+     Step length set to   1.00000
+
+     Final RMS Misfit:        1.19
+
+     Attempted to update data weights and caused overshoot
+
+     treating as converged
+
+
+
+ Solution converged - Outputing results to file
+
+
+
+ Calculating sensitivity map
+
+
+
+
+
+ Processing dataset   2
+
+
+
+
+
+ End of data:  Terminating

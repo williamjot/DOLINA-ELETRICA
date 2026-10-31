@@ -1,0 +1,130 @@
+{
+  "case": {
+    "id": "L1_WS",
+    "line": "L1",
+    "array": "WS",
+    "date_folder": "20262210",
+    "data": "20262210_WS_FILTRADO.bin",
+    "topography": "Linha01_Dolina_10m.xlsx",
+    "remote": false
+  },
+  "source_data": "D:\\WILLIAM\\DOLINA-ELETRICA\\02_DADOS_GEOFISICOS\\20262210\\FILTRADOS\\20262210_WS_FILTRADO.bin",
+  "topography": "D:\\WILLIAM\\DOLINA-ELETRICA\\02_DADOS_GEOFISICOS\\20262210\\Linha01_Dolina_10m.xlsx",
+  "qc": {
+    "measurements_imported": 811,
+    "measurements_removed_basic_qc": 0,
+    "measurements_removed_contact": 10,
+    "measurements_inverted": 801,
+    "instrument_error_used": true,
+    "contact_max_ohm": 40000.0
+  },
+  "mesh_parameters": {
+    "typ": "quad",
+    "fmd": 120.0,
+    "elemx": 4,
+    "xgf": 1.5,
+    "zf": 1.1,
+    "zgf": 1.5,
+    "pad": 8
+  },
+  "inversion_parameters": {
+    "data_type": 1,
+    "inverse_type": 1,
+    "reg_mode": 0,
+    "alpha_aniso": 1.0,
+    "alpha_s": 10.0,
+    "max_iter": 10,
+    "tolerance": 1.0,
+    "error_mod": 2,
+    "min_error": 0.01,
+    "a_wgt": 0.0,
+    "b_wgt": 0.0,
+    "rho_min": 1.0,
+    "rho_max": 1000000.0
+  },
+  "synthetic_parameters": {
+    "background_resistivity_ohm_m": 5000.0,
+    "cavity_resistivity_ohm_m": 50000.0,
+    "gaussian_noise_percent": 3.0,
+    "random_seed": 20261030,
+    "comparison_threshold_ohm_m": 15811.388300841896
+  },
+  "cavity_intersection": {
+    "line": "L1",
+    "vertices": 263,
+    "station_min_m": 188.75,
+    "station_max_m": 354.5,
+    "elevation_min_m": 840.0752925900088,
+    "elevation_max_m": 898.3662851088278,
+    "intersection_depth_m": 58.29099251881905,
+    "source_model": "D:\\WILLIAM\\DOLINA-ELETRICA\\01_PROJETO_DOLINA_MARACANAS\\01_MODELO_3D\\dolina_model.npz",
+    "model_interpretation": "Synthetic collapse-doline wall and floor constrained by two survey lines; not a surveyed cave geometry."
+  },
+  "real_inversion": {
+    "project_summary": {
+      "Data": true,
+      "Number of Surveys": 1,
+      "Number of electrodes": 66,
+      "Borehole electrodes": false,
+      "Remote electrodes": false,
+      "Error model": false,
+      "Mesh Type": "Quadrilateral",
+      "Number of Elements": 14520,
+      "Number of Nodes": 14895,
+      "Estimated RAM for forward solution (Gb)": 0.010124187,
+      "Estimated RAM for inverse solution (Gb)": 0.105072564,
+      "Convergence of inverse solution": true,
+      "RMS of inverse solution": 1.22,
+      "RMS error as percentage estimate": 36.365835575543336,
+      "Number of iterations": 7,
+      "Median normalised error": 0.44189,
+      "Working Directory": "D:\\WILLIAM\\DOLINA-ELETRICA\\05_RESULTADOS_RESIPY\\INVERSOES_INDIVIDUAIS_QUAD_CAVIDADE_CONTINUACAO_2026-10-30\\L1_WS\\REAL\\projeto_resipy\\invdir"
+    },
+    "mesh_elements": 14520,
+    "mesh_nodes": 14895,
+    "rms": 1.22,
+    "iterations": 7,
+    "converged": true
+  },
+  "synthetic_inversion": {
+    "project_summary": {
+      "Data": true,
+      "Number of Surveys": 1,
+      "Number of electrodes": 66,
+      "Borehole electrodes": false,
+      "Remote electrodes": false,
+      "Error model": false,
+      "Mesh Type": "Quadrilateral",
+      "Number of Elements": 14520,
+      "Number of Nodes": 14895,
+      "Estimated RAM for forward solution (Gb)": 0.010124187,
+      "Estimated RAM for inverse solution (Gb)": 0.105072564,
+      "Convergence of inverse solution": true,
+      "RMS of inverse solution": 1.07,
+      "RMS error as percentage estimate": 3.489088284725441,
+      "Number of iterations": 2,
+      "Median normalised error": 0.71995,
+      "Working Directory": "D:\\WILLIAM\\DOLINA-ELETRICA\\05_RESULTADOS_RESIPY\\INVERSOES_INDIVIDUAIS_QUAD_CAVIDADE_CONTINUACAO_2026-10-30\\L1_WS\\SINTETICO\\projeto_resipy\\invdir"
+    },
+    "mesh_elements": 14520,
+    "mesh_nodes": 14895,
+    "rms": 1.07,
+    "iterations": 2,
+    "converged": true
+  },
+  "comparison_metrics": {
+    "threshold_ohm_m": 15811.388300841896,
+    "synthetic_iou": 0.9003880983182406,
+    "synthetic_recall": 0.9761570827489481,
+    "synthetic_precision": 0.9206349206349206,
+    "synthetic_median_inside_ohm_m": 44599.9101,
+    "synthetic_median_local_outside_ohm_m": 5502.83132,
+    "real_median_inside_modelled_cavity_ohm_m": 3640.77067,
+    "real_median_local_outside_ohm_m": 4769.692465,
+    "real_fraction_modelled_cavity_above_threshold": 0.05890603085553997,
+    "log10_apparent_resistivity_pearson_real_vs_synthetic": -0.07348602563922829,
+    "log10_apparent_resistivity_rmse_real_vs_synthetic": 0.51567161581943
+  },
+  "cut_corners": true,
+  "finished_at": "2026-10-30T23:06:37"
+}
