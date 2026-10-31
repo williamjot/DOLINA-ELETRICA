@@ -59,6 +59,12 @@ PNG é adicionado isoladamente a um commit e enviado imediatamente para
 `origin/main`. Os arquivos numéricos permanecem fora desses commits e devem
 ser registrados em um commit final após a validação da execução.
 
+`resipy_resume_l2_combined_synthetic.py` é o ponto de continuação específico
+para quando a inversão real L2 DD+WS+PD já terminou, mas o `forward()` do
+ResIPy 3.6.6 encontrou o bug interno de profundidade de malha com o eletrodo
+remoto. Ele reutiliza os CSV/PNG reais já exportados, mantém o eletrodo 67 no
+infinito e calcula somente pseudoseção, reinversão e comparação sintéticas.
+
 ## Notebooks prontos para execução manual
 
 Os notebooks em `notebooks/` são entregues sem células executadas e nunca

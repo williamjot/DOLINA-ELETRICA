@@ -447,6 +447,32 @@ def reset_to_homogeneous_start(project: Project, background: float) -> None:
     configure_inversion(project)
 
 
+def forward_with_remote_workaround(project: Project, **kwargs) -> None:
+    """Run forward while bypassing a ResIPy 3.6.6 remote-electrode FMD bug.
+
+    Project.forward() restores the electrode table through setElec(). For a
+    mixed finite+remote sequence, setElec() calls computeFineMeshDepth() after
+    removing the remote row but before remapping label 67, causing an out of
+    bounds index. The forward R2 calculation has already used the correctly
+    flagged remote electrode at that point, so only the redundant FMD
+    recomputation is replaced by the documented fixed FMD.
+    """
+    has_remote = bool("remote" in project.elec and project.elec["remote"].astype(bool).any())
+    if not has_remote:
+        project.forward(**kwargs)
+        return
+    had_instance_override = "computeFineMeshDepth" in project.__dict__
+    previous = project.__dict__.get("computeFineMeshDepth")
+    project.computeFineMeshDepth = lambda: setattr(project, "fmd", MESH_PARAMETERS["fmd"])
+    try:
+        project.forward(**kwargs)
+    finally:
+        if had_instance_override:
+            project.computeFineMeshDepth = previous
+        else:
+            del project.computeFineMeshDepth
+
+
 def mesh_values(project: Project) -> tuple[np.ndarray, np.ndarray]:
     mesh = project.meshResults[0]
     centres = mesh.elmCentre[:, [0, 2]]
@@ -592,7 +618,8 @@ def process_case(root: Path, output_root: Path, case: dict, contact_max_ohm: flo
     synthetic.sequence = real_sequence.copy()
     np.random.seed(SYNTHETIC_PARAMETERS["random_seed"] + CASES.index(case))
     forward_messages: list[str] = []
-    synthetic.forward(
+    forward_with_remote_workaround(
+        synthetic,
         noise=SYNTHETIC_PARAMETERS["gaussian_noise_percent"],
         iplot=False,
         dump=lambda message: forward_messages.append(str(message)),

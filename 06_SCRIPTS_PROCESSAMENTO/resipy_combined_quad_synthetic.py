@@ -197,7 +197,8 @@ def process_case(root: Path, output_root: Path, case: dict, contact_max_ohm: flo
     synthetic.sequence = sequence.copy()
     np.random.seed(base.SYNTHETIC_PARAMETERS["random_seed"] + seed_offset)
     forward_messages = []
-    synthetic.forward(
+    base.forward_with_remote_workaround(
+        synthetic,
         noise=base.SYNTHETIC_PARAMETERS["gaussian_noise_percent"],
         iplot=False,
         dump=lambda message: forward_messages.append(str(message)),
