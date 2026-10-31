@@ -191,11 +191,25 @@ def build_electrodes(topo: pd.DataFrame, remote: bool) -> pd.DataFrame:
     elec["buried"] = False
     elec["remote"] = False
     if remote:
+        # ResIPy 3.6.6 calls computeFineMeshDepth() inside setElec(). If the
+        # remote coordinate is already 99999, _findRemote() removes it from
+        # the finite-electrode array before data labels are remapped and a
+        # combined DD+WS+PD survey can index past the remaining 66 rows. Use a
+        # temporary finite placeholder, then mark/move it to infinity after
+        # setElec() has completed its internal depth calculation.
+        spacing = float(np.median(np.diff(elec["x"].to_numpy(dtype=float))))
         elec = pd.concat(
             [
                 elec,
                 pd.DataFrame(
-                    [{"label": "67", "x": 99_999.0, "y": 0.0, "z": 0.0, "buried": False, "remote": False}]
+                    [{
+                        "label": "67",
+                        "x": float(elec["x"].iloc[-1]) + spacing,
+                        "y": float(elec["y"].iloc[-1]),
+                        "z": float(elec["z"].iloc[-1]),
+                        "buried": False,
+                        "remote": False,
+                    }]
                 ),
             ],
             ignore_index=True,
@@ -207,6 +221,7 @@ def apply_electrodes(project: Project, topo: pd.DataFrame, remote: bool) -> None
     project.setElec(build_electrodes(topo, remote))
     if remote:
         remote_mask = project.elec["label"].astype(str) == "67"
+        project.elec.loc[remote_mask, ["x", "y", "z"]] = [99_999.0, 0.0, 0.0]
         project.elec.loc[remote_mask, "remote"] = True
         if project.surveys:
             project.surveys[0].elec = project.elec
