@@ -1,0 +1,38 @@
+Writing .in file and mesh.dat... 
+done
+
+Writing protocol.dat... 
+done
+
+Running forward model... 
+
+
+
+
+ >> R  2    R e s i s t i v i t y   I n v e r s i o n   v4.10 <<
+
+
+
+ >> D a t e : 30 - 10 - 2026
+
+ >> My beautiful survey                                                             
+
+ >> F o r w a r d   S o l u t i o n   S e l e c t e d <<
+
+ >> Determining storage needed for finite element conductance matrix
+
+ >> Generating index array for finite element conductance matrix
+
+ >> Reading start resistivity from resistivity.dat               
+
+
+
+ Measurements read:   651     Measurements rejected:     0
+
+
+
+ >> Total Memory required is:          0.010 Gb
+
+(forward modelling finished)
+
+Forward modelling done.

@@ -1,0 +1,4 @@
+name,dataset,iteration,resRMS,phaseRMS,read,rejected,success
+R2_forward,1,1,8.26,,651,0,N/A
+R2_forward,1,2,0.98,,651,0,N/A
+R2_forward,1,2,1.0,,651,0,N/A
