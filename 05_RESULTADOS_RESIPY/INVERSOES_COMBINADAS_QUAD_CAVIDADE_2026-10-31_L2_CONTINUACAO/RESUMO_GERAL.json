@@ -1,0 +1,10 @@
+{
+  "success": [],
+  "failures": [
+    {
+      "case": "L2_DD_WS_PD_COMBINADO",
+      "error": "IndexError('index 67 is out of bounds for axis 0 with size 66')",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\WILLIAM\\DOLINA-ELETRICA\\06_SCRIPTS_PROCESSAMENTO\\resipy_combined_quad_synthetic.py\", line 369, in main\n    summaries.append(process_case(root, output, case, args.contact_max_ohm, index))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\WILLIAM\\DOLINA-ELETRICA\\06_SCRIPTS_PROCESSAMENTO\\resipy_combined_quad_synthetic.py\", line 200, in process_case\n    synthetic.forward(\n  File \"D:\\WILLIAM\\.venvs\\DOLINA-ELETRICA-resipy\\Lib\\site-packages\\resipy\\Project.py\", line 6451, in forward\n    self.setElec(elec) # using Project.createSurvey() overwrite self.elec so we need to set it back\n    ^^^^^^^^^^^^^^^^^^\n  File \"D:\\WILLIAM\\.venvs\\DOLINA-ELETRICA-resipy\\Lib\\site-packages\\resipy\\Project.py\", line 785, in setElec\n    self.computeFineMeshDepth()\n  File \"D:\\WILLIAM\\.venvs\\DOLINA-ELETRICA-resipy\\Lib\\site-packages\\resipy\\Project.py\", line 3376, in computeFineMeshDepth\n    maxDist = np.max(np.abs(elec[array[:,0]-np.min(array[:,0]),0] - elec[array[:,2]-np.min(array[:,2]),0])) # max dipole separation\n                            ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nIndexError: index 67 is out of bounds for axis 0 with size 66\n"
+    }
+  ]
+}

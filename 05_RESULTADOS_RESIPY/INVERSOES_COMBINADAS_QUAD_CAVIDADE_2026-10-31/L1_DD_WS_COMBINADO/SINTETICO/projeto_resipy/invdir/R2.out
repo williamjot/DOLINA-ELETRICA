@@ -1,0 +1,78 @@
+
+
+ >> R  2    R e s i s t i v i t y   I n v e r s i o n   v4.10 <<
+
+ >> D a t e : 31 - 10 - 2026
+ >> L1_DD_WS_COMBINADO_SINTETICO_QUAD                                               
+ >> I n v e r s e   S o l u t i o n   S e l e c t e d <<
+ >> Reading start resistivity from res0.dat                      
+ >> R e g u l a r i s e d   T y p e <<
+ >>   L i n e a r    F i l t e r    <<
+ >> L o g - D a t a   I n v e r s i o n <<
+ >> N o r m a l   R e g u l a r i s a t i o n <<
+ >> D a t a   w e i g h t s   w i l l   b e  m o d i f i e d <<
+ >> D a t a   w e i g h t   t o   b e   r e a d   f r o m   d a t a   f i l e <<
+
+
+ Processing dataset   1
+
+
+ Measurements read:  1452     Measurements rejected:     0
+   Geometric mean of apparent resistivities:  0.15018E+05
+
+ >> Total Memory required is:          0.181 Gb
+
+   Iteration   1
+     Initial RMS Misfit:        28.40       Number of data ignored:     0
+     Alpha:        1240.815   RMS Misfit:        6.92  Roughness:       34.982
+     Alpha:         575.935   RMS Misfit:        7.18  Roughness:       46.803
+     Step length set to   1.00000
+     Final RMS Misfit:        6.92
+     Updated data weights
+
+   Iteration   2
+     Initial RMS Misfit:         5.29       Number of data ignored:     0
+     Alpha:         808.011   RMS Misfit:        2.42  Roughness:       29.347
+     Alpha:         375.046   RMS Misfit:        1.87  Roughness:       35.856
+     Alpha:         174.081   RMS Misfit:        1.49  Roughness:       43.058
+     Alpha:          80.801   RMS Misfit:        1.26  Roughness:       51.118
+     Alpha:          37.505   RMS Misfit:        1.15  Roughness:       60.706
+     Alpha:          17.408   RMS Misfit:        1.12  Roughness:       72.728
+     Alpha:           8.080   RMS Misfit:        1.17  Roughness:       87.615
+     Step length set to   1.00000
+     Final RMS Misfit:        1.12
+     Attempted to update data weights and caused overshoot
+     treating as converged
+
+ Solution converged - Outputing results to file
+
+ Calculating sensitivity map
+
+
+ Processing dataset   2
+
+
+ End of data:  Terminating
+
+
+                     Timing Summary
+                     ==============
+     Total time taken:                               135. s
+     Percent time taken forming element equations:    0.3 %
+     Percent time taken solving forward  equations:  35.6 %
+     Percent time taken forming Jacobian:             0.8 %
+     Percent time taken solving inverse equations:   51.9 %
+     Percent time taken calculating res. matrix:      0.0 %
+
+                     Timing Details
+                     ==============
+     Number of calls to form element equations:       143
+     Average time taken in call:                      0.0 s
+     Number of calls to solve forward equations:     9438
+     Average time taken in call:                      0.0 s
+     Number of calls to form Jacobian:                  2
+     Average time taken in call:                      0.5 s
+     Number of calls to solve inverse equations:        9
+     Average time taken in call:                      7.8 s
+     Number of calls to calculate res. matrix:          1
+     Average time taken in call:                      0.0 s

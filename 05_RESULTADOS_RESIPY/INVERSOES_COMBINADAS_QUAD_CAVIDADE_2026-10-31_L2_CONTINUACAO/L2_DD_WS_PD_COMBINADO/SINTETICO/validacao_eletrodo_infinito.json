@@ -1,0 +1,8 @@
+{
+  "required": true,
+  "valid": true,
+  "sequence_rows_with_remote_a_67": 1304,
+  "remote_electrode_count": 1,
+  "remote_label": "67",
+  "representation": "ResIPy remote=True; forward R2 com polo no infinito"
+}

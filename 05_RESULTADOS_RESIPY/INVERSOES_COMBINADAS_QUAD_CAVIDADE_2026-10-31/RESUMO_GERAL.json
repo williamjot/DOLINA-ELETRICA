@@ -1,0 +1,169 @@
+{
+  "success": [
+    {
+      "case": {
+        "id": "L1_DD_WS_COMBINADO",
+        "line": "L1",
+        "date_folder": "20262210",
+        "topography": "Linha01_Dolina_10m.xlsx",
+        "arrays": [
+          [
+            "DD",
+            "20262210_DD_FILTRADO.bin"
+          ],
+          [
+            "WS",
+            "20262210_WS_FILTRADO.bin"
+          ]
+        ],
+        "remote": false
+      },
+      "source_files": [
+        "D:\\WILLIAM\\DOLINA-ELETRICA\\02_DADOS_GEOFISICOS\\20262210\\FILTRADOS\\20262210_DD_FILTRADO.bin",
+        "D:\\WILLIAM\\DOLINA-ELETRICA\\02_DADOS_GEOFISICOS\\20262210\\FILTRADOS\\20262210_WS_FILTRADO.bin"
+      ],
+      "source_counts_imported": {
+        "DD": 667,
+        "WS": 811
+      },
+      "source_counts_after_qc": {
+        "DD": 651,
+        "WS": 801
+      },
+      "qc": {
+        "measurements_imported": 1478,
+        "measurements_removed_basic_qc": 0,
+        "measurements_removed_contact": 26,
+        "measurements_inverted": 1452,
+        "instrument_error_used": true,
+        "contact_max_ohm": 40000.0
+      },
+      "remote_electrode_real": {
+        "required": false,
+        "valid": true,
+        "reason": "perfil sem polo-dipolo"
+      },
+      "remote_electrode_synthetic": {
+        "required": false,
+        "valid": true,
+        "reason": "perfil sem polo-dipolo"
+      },
+      "mesh_parameters": {
+        "typ": "quad",
+        "fmd": 120.0,
+        "elemx": 4,
+        "xgf": 1.5,
+        "zf": 1.1,
+        "zgf": 1.5,
+        "pad": 8
+      },
+      "inversion_parameters": {
+        "data_type": 1,
+        "inverse_type": 1,
+        "reg_mode": 0,
+        "alpha_aniso": 1.0,
+        "alpha_s": 10.0,
+        "max_iter": 10,
+        "tolerance": 1.0,
+        "error_mod": 2,
+        "min_error": 0.01,
+        "a_wgt": 0.0,
+        "b_wgt": 0.0,
+        "rho_min": 1.0,
+        "rho_max": 1000000.0
+      },
+      "synthetic_parameters": {
+        "background_resistivity_ohm_m": 5000.0,
+        "cavity_resistivity_ohm_m": 50000.0,
+        "gaussian_noise_percent": 3.0,
+        "random_seed": 20261030,
+        "comparison_threshold_ohm_m": 15811.388300841896
+      },
+      "cavity_intersection": {
+        "line": "L1",
+        "vertices": 263,
+        "station_min_m": 188.75,
+        "station_max_m": 354.5,
+        "elevation_min_m": 840.0752925900088,
+        "elevation_max_m": 898.3662851088278,
+        "intersection_depth_m": 58.29099251881905,
+        "source_model": "D:\\WILLIAM\\DOLINA-ELETRICA\\01_PROJETO_DOLINA_MARACANAS\\01_MODELO_3D\\dolina_model.npz",
+        "model_interpretation": "Synthetic collapse-doline wall and floor constrained by two survey lines; not a surveyed cave geometry."
+      },
+      "real_inversion": {
+        "project_summary": {
+          "Data": true,
+          "Number of Surveys": 1,
+          "Number of electrodes": 66,
+          "Borehole electrodes": false,
+          "Remote electrodes": false,
+          "Error model": false,
+          "Mesh Type": "Quadrilateral",
+          "Number of Elements": 14520,
+          "Number of Nodes": 14895,
+          "Estimated RAM for forward solution (Gb)": 0.010165851,
+          "Estimated RAM for inverse solution (Gb)": 0.180771495,
+          "Convergence of inverse solution": true,
+          "RMS of inverse solution": 1.31,
+          "RMS error as percentage estimate": 592.8889185837635,
+          "Number of iterations": 8,
+          "Median normalised error": 0.36485999999999996,
+          "Working Directory": "D:\\WILLIAM\\DOLINA-ELETRICA\\05_RESULTADOS_RESIPY\\INVERSOES_COMBINADAS_QUAD_CAVIDADE_2026-10-31\\L1_DD_WS_COMBINADO\\REAL\\projeto_resipy\\invdir"
+        },
+        "mesh_elements": 14520,
+        "mesh_nodes": 14895,
+        "rms": 1.31,
+        "iterations": 8,
+        "converged": true
+      },
+      "synthetic_inversion": {
+        "project_summary": {
+          "Data": true,
+          "Number of Surveys": 1,
+          "Number of electrodes": 66,
+          "Borehole electrodes": false,
+          "Remote electrodes": false,
+          "Error model": false,
+          "Mesh Type": "Quadrilateral",
+          "Number of Elements": 14520,
+          "Number of Nodes": 14895,
+          "Estimated RAM for forward solution (Gb)": 0.010165851,
+          "Estimated RAM for inverse solution (Gb)": 0.180771495,
+          "Convergence of inverse solution": true,
+          "RMS of inverse solution": 1.12,
+          "RMS error as percentage estimate": 3.704452349745869,
+          "Number of iterations": 2,
+          "Median normalised error": 0.742115,
+          "Working Directory": "D:\\WILLIAM\\DOLINA-ELETRICA\\05_RESULTADOS_RESIPY\\INVERSOES_COMBINADAS_QUAD_CAVIDADE_2026-10-31\\L1_DD_WS_COMBINADO\\SINTETICO\\projeto_resipy\\invdir"
+        },
+        "mesh_elements": 14520,
+        "mesh_nodes": 14895,
+        "rms": 1.12,
+        "iterations": 2,
+        "converged": true
+      },
+      "comparison_metrics": {
+        "threshold_ohm_m": 15811.388300841896,
+        "synthetic_iou": 0.9206349206349206,
+        "synthetic_recall": 0.9761570827489481,
+        "synthetic_precision": 0.9418132611637348,
+        "synthetic_median_inside_ohm_m": 46907.7375,
+        "synthetic_median_local_outside_ohm_m": 5092.97365,
+        "real_median_inside_modelled_cavity_ohm_m": 3816.62529,
+        "real_median_local_outside_ohm_m": 4522.08779,
+        "real_fraction_modelled_cavity_above_threshold": 0.04628330995792426,
+        "log10_apparent_resistivity_pearson_real_vs_synthetic": 0.022680977930510573,
+        "log10_apparent_resistivity_rmse_real_vs_synthetic": 0.6551704680418526
+      },
+      "cut_corners": true,
+      "finished_at": "2026-10-31T03:06:51"
+    }
+  ],
+  "failures": [
+    {
+      "case": "L2_DD_WS_PD_COMBINADO",
+      "error": "IndexError('index 67 is out of bounds for axis 0 with size 66')",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\WILLIAM\\DOLINA-ELETRICA\\06_SCRIPTS_PROCESSAMENTO\\resipy_combined_quad_synthetic.py\", line 369, in main\n    summaries.append(process_case(root, output, case, args.contact_max_ohm, index))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\WILLIAM\\DOLINA-ELETRICA\\06_SCRIPTS_PROCESSAMENTO\\resipy_combined_quad_synthetic.py\", line 122, in process_case\n    real, topo, source_counts, source_files = import_arrays(\n                                              ^^^^^^^^^^^^^^\n  File \"D:\\WILLIAM\\DOLINA-ELETRICA\\06_SCRIPTS_PROCESSAMENTO\\resipy_combined_quad_synthetic.py\", line 79, in import_arrays\n    base.apply_electrodes(project, topo, case[\"remote\"])\n  File \"D:\\WILLIAM\\DOLINA-ELETRICA\\06_SCRIPTS_PROCESSAMENTO\\resipy_individual_quad_synthetic.py\", line 207, in apply_electrodes\n    project.setElec(build_electrodes(topo, remote))\n  File \"D:\\WILLIAM\\.venvs\\DOLINA-ELETRICA-resipy\\Lib\\site-packages\\resipy\\Project.py\", line 785, in setElec\n    self.computeFineMeshDepth()\n  File \"D:\\WILLIAM\\.venvs\\DOLINA-ELETRICA-resipy\\Lib\\site-packages\\resipy\\Project.py\", line 3376, in computeFineMeshDepth\n    maxDist = np.max(np.abs(elec[array[:,0]-np.min(array[:,0]),0] - elec[array[:,2]-np.min(array[:,2]),0])) # max dipole separation\n                            ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nIndexError: index 67 is out of bounds for axis 0 with size 66\n"
+    }
+  ]
+}

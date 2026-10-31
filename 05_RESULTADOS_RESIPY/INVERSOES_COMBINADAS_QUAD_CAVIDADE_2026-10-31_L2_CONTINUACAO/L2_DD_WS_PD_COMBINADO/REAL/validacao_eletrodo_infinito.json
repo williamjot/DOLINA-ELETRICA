@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "valid": true,
+  "pd_measurements": 1321,
+  "pd_current_electrode_a_labels": [
+    "67"
+  ],
+  "remote_electrode_count": 1,
+  "remote_label": "67",
+  "representation": "ResIPy remote=True; R2 escreve o eletrodo 67 como remoto/infinito"
+}
