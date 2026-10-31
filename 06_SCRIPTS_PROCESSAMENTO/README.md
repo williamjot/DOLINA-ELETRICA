@@ -49,6 +49,16 @@ python .\resipy_individual_quad_synthetic.py `
 O ResIPy 3.6.6 requer `pandas<3`; essa restrição está fixada em
 `requirements_resipy.txt`.
 
+`resipy_combined_quad_synthetic.py` repete o mesmo método com os arranjos
+combinados por linha: DD+WS em L1 e DD+WS+PD em L2. No caso L2, o eletrodo 67
+é validado e marcado como remoto (`remote=True`), que é a representação do
+eletrodo no infinito usada pelo R2/ResIPy.
+
+Os dois scripts aceitam `--publish-images`. Quando essa opção é usada, cada
+PNG é adicionado isoladamente a um commit e enviado imediatamente para
+`origin/main`. Os arquivos numéricos permanecem fora desses commits e devem
+ser registrados em um commit final após a validação da execução.
+
 ## Notebooks prontos para execução manual
 
 Os notebooks em `notebooks/` são entregues sem células executadas e nunca
@@ -58,5 +68,7 @@ retomam automaticamente pastas parciais:
   duas combinadas, diretamente dos arquivos `BRUTOS`.
 - `02_inversoes_individuais_quad_sintetico.ipynb`: seleção explícita dos casos,
   inversões quadrilaterais e ensaio sintético no ResIPy.
+- `03_continuacao_individuais_e_combinados.ipynb`: continuação dos quatro casos
+  individuais pendentes e, depois, os dois perfis com arranjos combinados.
 
 Ambos recusam sobrescrever uma pasta de saída existente.

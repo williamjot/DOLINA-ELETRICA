@@ -12,6 +12,7 @@ import argparse
 import json
 import math
 import shutil
+import subprocess
 import traceback
 from datetime import datetime
 from importlib.metadata import version
@@ -113,6 +114,52 @@ SYNTHETIC_PARAMETERS = {
 
 PLOT_VMIN_LOG10 = math.log10(200.0)
 PLOT_VMAX_LOG10 = math.log10(100_000.0)
+
+IMAGE_PUBLISHER = None
+
+
+class GitImagePublisher:
+    """Commit and push exactly one exported image at a time."""
+
+    def __init__(self, root: Path, remote: str = "origin", branch: str = "main") -> None:
+        self.root = root.resolve()
+        self.remote = remote
+        self.branch = branch
+
+    def publish(self, path: Path) -> None:
+        path = path.resolve()
+        relative = path.relative_to(self.root)
+        subprocess.run(
+            ["git", "-C", str(self.root), "add", "--", str(relative)],
+            check=True,
+        )
+        changed = subprocess.run(
+            ["git", "-C", str(self.root), "diff", "--cached", "--quiet", "--", str(relative)],
+            check=False,
+        ).returncode
+        if changed == 0:
+            print(f"[git] imagem sem alteração: {relative}", flush=True)
+            return
+        message = f"Adiciona figura {relative.as_posix()}"
+        subprocess.run(
+            ["git", "-C", str(self.root), "commit", "-m", message, "--", str(relative)],
+            check=True,
+        )
+        subprocess.run(
+            ["git", "-C", str(self.root), "push", self.remote, self.branch],
+            check=True,
+        )
+        print(f"[git] imagem publicada: {relative}", flush=True)
+
+
+def configure_image_publisher(root: Path, enabled: bool) -> None:
+    global IMAGE_PUBLISHER
+    IMAGE_PUBLISHER = GitImagePublisher(root) if enabled else None
+
+
+def publish_image(path: Path) -> None:
+    if IMAGE_PUBLISHER is not None:
+        IMAGE_PUBLISHER.publish(path)
 
 
 def json_default(value):
@@ -229,6 +276,7 @@ def save_pseudo(project: Project, path: Path, title: str) -> None:
     fig.tight_layout()
     fig.savefig(path, dpi=180)
     plt.close(fig)
+    publish_image(path)
 
 
 def save_mesh(project: Project, path: Path, title: str) -> None:
@@ -238,6 +286,7 @@ def save_mesh(project: Project, path: Path, title: str) -> None:
     fig.tight_layout()
     fig.savefig(path, dpi=180)
     plt.close(fig)
+    publish_image(path)
 
 
 def save_results(project: Project, path: Path, title: str) -> None:
@@ -257,6 +306,7 @@ def save_results(project: Project, path: Path, title: str) -> None:
     fig.tight_layout()
     fig.savefig(path, dpi=220)
     plt.close(fig)
+    publish_image(path)
 
 
 def save_true_model(project: Project, true_resistivity: np.ndarray, path: Path, title: str) -> None:
@@ -277,6 +327,7 @@ def save_true_model(project: Project, true_resistivity: np.ndarray, path: Path, 
     fig.tight_layout()
     fig.savefig(path, dpi=220)
     plt.close(fig)
+    publish_image(path)
 
 
 def run_inversion(project: Project, output: Path, label: str) -> dict:
@@ -464,6 +515,7 @@ def save_comparison(real: Project, synthetic: Project, true_mesh, output: Path, 
     fig.tight_layout()
     fig.savefig(output, dpi=220)
     plt.close(fig)
+    publish_image(output)
 
 
 def process_case(root: Path, output_root: Path, case: dict, contact_max_ohm: float) -> dict:
@@ -650,9 +702,15 @@ def main() -> None:
     parser.add_argument("output", type=Path)
     parser.add_argument("--contact-max-ohm", type=float, default=40_000.0)
     parser.add_argument("--cases", nargs="*", choices=[case["id"] for case in CASES])
+    parser.add_argument(
+        "--publish-images",
+        action="store_true",
+        help="Cria um commit e faz push imediatamente após cada PNG exportado.",
+    )
     args = parser.parse_args()
     root = args.root.resolve()
     output = args.output.resolve()
+    configure_image_publisher(root, args.publish_images)
     if output.exists():
         raise FileExistsError(f"Saída já existe; não será sobrescrita: {output}")
     output.mkdir(parents=True)
