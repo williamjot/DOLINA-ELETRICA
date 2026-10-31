@@ -81,5 +81,7 @@ retomam automaticamente pastas parciais:
   inversões quadrilaterais e ensaio sintético no ResIPy.
 - `03_continuacao_individuais_e_combinados.ipynb`: continuação dos quatro casos
   individuais pendentes e, depois, os dois perfis com arranjos combinados.
+- `04_workflows_e_galeria_resultados_ert.ipynb`: workflow reproduzível completo
+  e galeria GitHub das 49 figuras finais individuais e combinadas.
 
 Ambos recusam sobrescrever uma pasta de saída existente.
